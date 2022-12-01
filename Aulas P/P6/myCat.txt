@@ -1,0 +1,7 @@
+Este e um ficheiro
+Com algumas linhas
+e outras
+coisas
+para experimentar
+se os programas
+funcionam bem
