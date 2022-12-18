@@ -122,6 +122,15 @@ static int iter(int niter)
         return EXIT_FAILURE;
     }
 
+/* crias semaforo ************************************************* */
+int Semaf;
+    if((Semaf = semCreate( SHMKEY, 1)) == -1){
+        perror("shmemCreate");
+        return EXIT_FAILURE;
+    }
+    semUp(Semaf,1);  // Inicializa Semáforo  
+
+
     /* anexa a memória partilhada ao espaço de endereçamento próprio */
     int *cntp;
     if (shmemAttach (shmid, (void **) &cntp) == -1) { 
